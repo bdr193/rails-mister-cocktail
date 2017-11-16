@@ -11,10 +11,13 @@ require 'open-uri'
 puts 'Cleaning database...'
 Ingredient.destroy_all
 
+puts 'Fetching info...'
 url = 'http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+puts 'Fetching successful...'
 drinks_serialized = open(url).read
 drinks = JSON.parse(drinks_serialized)
 
 drinks["drinks"].each do |drink|
   Ingredient.create(name: drink["strIngredient1"])
 end
+puts 'Seeding done...'
