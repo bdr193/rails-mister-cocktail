@@ -3,14 +3,9 @@
   <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :amount %>
   <%= f.input :description %>
-  <%= f.input :ingredient_id, collection: Ingredient.all , html: { id: "selectize"}%>
- <!-- select("dose", "ingredient_id", Ingredient.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'None'}) %> -->
+  <%= f.input :ingredient_id, collection: Ingredient.all %>
+  <!-- select("dose", "ingredient_id", Ingredient.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'None'}) %> -->
   <%= f.submit "add a review", class: "btn btn-primary" %>
   <% end %>
-
-
-
-
-
 
 </div>
