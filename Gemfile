@@ -39,6 +39,8 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+gem "cocoon"
+gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
