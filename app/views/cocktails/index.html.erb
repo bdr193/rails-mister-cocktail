@@ -1,7 +1,10 @@
 <div class="container">
   <% @cocktails.each do |cocktail| %>
   <h2><%= link_to(cocktail.name, cocktail_path(cocktail.id)) %></h2>
-  <% end %>
 
-  <%= link_to("Add a new cocktail", new_cocktail_path, class: "btn btn-primary") %>
-</div>
+  <% end %>
+  <%= cl_image_tag("oqwzqi9w2fmj8ot1qe1w",
+      width: 400, height: 300, crop: :fill) %>
+
+    <%= link_to("Add a new cocktail", new_cocktail_path, class: "btn btn-primary") %>
+  </div>
