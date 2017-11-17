@@ -43,6 +43,7 @@ gem "cocoon"
 gem 'figaro'
 gem 'carrierwave', '~> 0.11.2'
 gem 'cloudinary'
+gem 'sinatra', '1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
